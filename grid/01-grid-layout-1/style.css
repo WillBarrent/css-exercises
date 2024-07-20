@@ -4,11 +4,27 @@ html {
   margin: 0;
 }
 
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .container {
   text-align: center;
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-rows: 100px 100px 500px 100px;
+  grid-template-columns: 300px 900px;
+
+  gap: 15px;
 }
 
 .container div {
@@ -21,10 +37,12 @@ html {
 }
 
 .header {
+  grid-column: 1 / -1;
   background-color: #006157;
 }
 
 .sidebar {
+  grid-row: 2 / 4;
   background-color: #005B94;
 }
 
@@ -37,6 +55,7 @@ html {
 }
 
 .footer {
+  grid-column: 1 / -1;
   background-color: #393f4d;
 }
 
